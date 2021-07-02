@@ -8,17 +8,15 @@ export default function ErrorPage() {
 
 ErrorPage.Layout = Layout;
 
-
-// Chưa gắn translation nên sẽ không pass test của cypress và next build
-// export const getStaticProps: GetStaticProps = async ({ locale }) => {
-//     return {
-//         props: {
-//             ...(await serverSideTranslations(locale!, [
-//                 "common",
-//                 "forms",
-//                 "menu",
-//                 "footer",
-//             ])),
-//         },
-//     };
-// };
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale!, [
+                "common",
+                "forms",
+                "menu",
+                "footer",
+            ])),
+        },
+    };
+};
