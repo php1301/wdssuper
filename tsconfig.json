@@ -1,0 +1,48 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": false,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "baseUrl": ".",
+        "paths": {
+            "@components/*": ["src/components/*"],
+            "@components": ["src/components"],
+            "@public/*": ["public/*"],
+            "@public": ["public"],
+            "@styles/*": ["src/styles/*"],
+            "@styles": ["src/styles"],
+            "@components/icons/*": ["src/components/icons/*"],
+            "@components/icons": ["src/components/icons"],
+            "@services/*": ["src/services/*"],
+            "@services": ["src/services"],
+            "@graphqlTypes/*": ["__generated__/*"],
+            "@graphqlTypes": ["__generated__"],
+            "@redux/*": ["src/redux/*"],
+            "@redux": ["src/redux"],
+            "@i18n": ["./i18n"],
+            "@test/*": ["test/*"],
+            "@test": ["test"],
+            "@contexts/*": ["src/contexts/*"],
+            "@framework/*": ["src/framework/basic-rest/*"],
+            "@settings/*": ["src/settings/*"],
+            "@utils/*": ["src/utils/*"]
+        }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": [
+        "node_modules",
+        "__generated__/globalTypes.ts",
+        "test/*",
+        "cypress/*"
+    ]
+}

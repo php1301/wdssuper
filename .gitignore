@@ -1,0 +1,32 @@
+# npm
+node_modules
+# next.js build files
+.next
+# # environment variables - not ignore for boilerplate purpose
+# .env
+# .env.*
+# !.env.example
+# .env.local
+# .env.development.local
+# .env.test.local
+# .env.production.local
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# vercel
+.vercel
+
+# PWA
+workbox-*.js
+sw.js

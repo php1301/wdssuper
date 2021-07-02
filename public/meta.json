@@ -1,0 +1,115 @@
+{
+    "name": "wdssuperv2",
+    "plugins": [
+        {
+            "name": "TailwindCSS",
+            "description": "A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
+            "url": "https://tailwindcss.com/docs"
+        },
+        {
+            "name": "CSS / styled-jsx",
+            "description": "Next.js comes with built-in support for CSS and styled-jsx. Styled-jsx is full, scoped and component-friendly CSS support for JSX (rendered on the server or the client).",
+            "url": "https://github.com/vercel/styled-jsx"
+        },
+        {
+            "name": "Fetch",
+            "description": "Next.js has a built-in polyfill for the fetch API. You don't need to worry about using it on either server or client side.",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
+        },
+        {
+            "name": "Axios",
+            "description": "Promise based HTTP client for the browser and node.js.",
+            "url": "https://github.com/axios/axios"
+        },
+        {
+            "name": "Storybook",
+            "description": "Storybook is an open source tool for developing UI components in isolation for React, Vue, Angular, and more. It makes building stunning UIs organized and efficient.",
+            "url": "https://storybook.js.org/docs/react/get-started/introduction"
+        },
+        {
+            "name": "SVGR",
+            "description": "Transform SVGs into React components.",
+            "url": "https://react-svgr.com/docs/getting-started/"
+        },
+        {
+            "name": "Environment Variables",
+            "description": "Use environment variables in your next.js project for server side, client or both.",
+            "url": "https://github.com/vercel/next.js/tree/canary/examples/environment-variables"
+        },
+        {
+            "name": "Reverse Proxy",
+            "description": "Proxying some URLs can be useful when you have a separate API backend development server and you want to send API requests on the same domain.",
+            "url": "https://webpack.js.org/configuration/dev-server/#devserverproxy"
+        },
+        {
+            "name": "Bundle Analyzer",
+            "description": "Use webpack-bundle-analyzer in your Next.js project. Visualize size of webpack output files with an interactive zoomable treemap.",
+            "url": "https://github.com/vercel/next.js/tree/canary/packages/next-bundle-analyzer"
+        },
+        {
+            "name": "Apollo GraphQL",
+            "description": "Apollo Client is a comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL. Use it to fetch, cache, and modify application data, all while automatically updating your UI.",
+            "url": "https://www.apollographql.com/docs/react/"
+        },
+        {
+            "name": "SWR",
+            "description": "React Hooks library for data fetching from Vercel",
+            "url": "https://swr.vercel.app/"
+        },
+        {
+            "name": "React Query",
+            "description": "Hooks for fetching, caching and updating asynchronous data in React.",
+            "url": "https://react-query.tanstack.com/overview"
+        },
+        {
+            "name": "react-use",
+            "description": "A Collection of useful React hooks.",
+            "url": "https://github.com/streamich/react-use"
+        },
+        {
+            "name": "React Redux",
+            "description": "Redux helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test.",
+            "url": "https://redux.js.org/introduction/getting-started"
+        },
+        {
+            "name": "next-i18next",
+            "description": "next-i18next is a plugin for Next.js projects that allows you to get translations up and running quickly and easily, while fully supporting SSR, multiple namespaces with codesplitting, etc.",
+            "url": "https://github.com/isaachinman/next-i18next"
+        },
+        {
+            "name": "ESLint",
+            "description": "A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Maintain your code quality with ease.",
+            "url": "https://eslint.org/docs/user-guide/getting-started"
+        },
+        {
+            "name": "Prettier",
+            "description": "An opinionated code formatter; Supports many languages; Integrates with most editors.",
+            "url": "https://prettier.io/docs/en/index.html"
+        },
+        {
+            "name": "lint-staged",
+            "description": " The concept of lint-staged is to run configured linter (or other) tasks on files that are staged in git.",
+            "url": "https://github.com/okonet/lint-staged"
+        },
+        {
+            "name": "Enzyme",
+            "description": "Enzyme is a JavaScript Testing utility for React that makes it easier to test your React Components' output. You can also manipulate, traverse, and in some ways simulate runtime given the output.",
+            "url": "https://enzymejs.github.io/enzyme/"
+        },
+        {
+            "name": "Cypress",
+            "description": "Fast, easy and reliable testing for anything that runs in a browser.",
+            "url": "https://docs.cypress.io/guides/overview/why-cypress.html"
+        },
+        {
+            "name": "Docker",
+            "description": "Docker simplifies and accelerates your workflow, while giving developers the freedom to innovate with their choice of tools, application stacks, and deployment environments for each project.",
+            "url": "https://www.docker.com/get-started"
+        },
+        {
+            "name": "Github Actions",
+            "description": "GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub.",
+            "url": "https://docs.github.com/en/actions"
+        }
+    ]
+}
