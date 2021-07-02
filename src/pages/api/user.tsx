@@ -4,4 +4,6 @@
 
 // Masking the URL of an external service (e.g. /api/secret instead of https://company.com/secret-url)
 // Using Environment Variables on the server to securely access external services.
-export {};
+export default function handler(req, res) {
+    res.status(200).json({ name: "John Doe" });
+}
