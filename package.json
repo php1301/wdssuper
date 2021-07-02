@@ -19,7 +19,7 @@
         "test": "jest -c test/jest.config.js",
         "cypress:open": "cypress open",
         "cypress:run": "cypress run --config video=false",
-        "cypress:test": "start-server-and-test build start http://localhost:3000 cypress:run"
+        "cypress:test": "start-server-and-test build && start http://localhost:3000 cypress:run"
     },
     "dependencies": {
         "@apollo/client": "^3.3.20",
