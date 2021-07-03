@@ -11,7 +11,7 @@ describe("Footer component testing with enzyme", () => {
 
     it("renders pankod logo directed to the correct url", () => {
         expect(component.find("a").at(0).prop("href")).toContain(
-            "https://github.com/pankod",
+            "https://github.com/php1301",
         );
     });
 
