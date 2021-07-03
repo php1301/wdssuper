@@ -37,11 +37,6 @@ Every plugin comes with an example to give you a brief knowledge about their usa
 ```bash
     yarn test
 ```
-
-## Learn More
-
-To learn more about **superplate**, please check out the [Documentation](https://github.com/pankod/superplate).
-
 ### **TailwindCSS**
 
 A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.
