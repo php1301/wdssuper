@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
     return (
         <div className="text-center py-5 bg-gray-800">
             <a
-                href="https://github.com/pankod"
+                href="https://github.com/php1301"
                 target="_blank"
                 className="block mb-3"
             >
