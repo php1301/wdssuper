@@ -7,9 +7,9 @@ const { i18n } = require("./next-i18next.config");
 const runtimeCaching = require("next-pwa/cache");
 const withPWA = require("next-pwa")({
     pwa: {
-      disable: process.env.NODE_ENV !== "production",
-      dest: "public",
-      runtimeCaching,
+        disable: process.env.NODE_ENV !== "production",
+        dest: "public",
+        runtimeCaching,
     },
     i18n,
 });

@@ -10,12 +10,6 @@
             }
         }
     ],
-    "prettier/prettier": [
-        "error",
-        {
-            "endOfLine": "auto"
-        }
-    ],
     "env": {
         "node": true,
         "browser": true,
