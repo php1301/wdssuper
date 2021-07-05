@@ -1,0 +1,114 @@
+default:
+  image: node:14.17.1
+
+# variables:
+#   CYPRESS_CACHE_FOLDER: '$CI_PROJECT_DIR/cache/Cypress'
+
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "master"'
+      when: always
+
+
+stages:
+  - checkout-master
+  - cache-check
+  - install
+  - lint
+  - build
+  - test
+  - deploy
+
+# cache:
+#   key: $CI_COMMIT_REF_SLUG
+#   # key:
+#   #  files:
+#   #     - Gemfile.lock
+#   #     - package.json
+#   paths:
+#     - node_modules/
+#     - .yarn
+#     # - cache/Cypress
+#     - build
+
+
+Get yarn cache directory path:
+  stage: cache-check
+  script:
+   - echo "::set-output name=dir::$(yarn cache dir)"
+
+
+Checkout Branch:
+  stage: checkout-master
+  variables:
+    GIT_STRATEGY: fetch
+    GIT_CHECKOUT: "false"
+  script:
+    - git checkout -B master origin/master
+
+
+Install dependencies:
+   stage: install
+   cache:
+     key: $CI_COMMIT_REF_SLUG
+  # key:
+  #  files:
+  #     - Gemfile.lock
+  #     - package.json
+     paths:
+       - node_modules/
+       - .yarn
+       # - cache/Cypress
+       - build
+   script:
+       - yarn
+   artifacts:
+     paths:
+       - node_modules/ 
+
+
+Run Lint:
+   stage: lint
+   needs: 
+     - job: Install dependencies
+       artifacts: true
+   script:
+       - yarn lint
+
+Run build:
+   stage: build
+   needs: 
+     - job: Install dependencies
+       artifacts: true
+   script:
+       - yarn build
+   artifacts:
+     paths:
+       - .next/
+
+Run tests:
+   stage: test
+   needs: 
+     - job: Install dependencies
+       artifacts: true
+   script:
+       - yarn test
+   artifacts:
+     when: always
+     reports:
+       junit:
+        - junit.xml      
+
+Run e2e test:
+   image: cypress/base:10
+   stage: test
+   needs: 
+     - job: Run build
+       artifacts: true
+     - job: Install dependencies
+       artifacts: true
+   script:
+       - npx cypress cache path
+       - npx cypress cache list
+       - yarn cypress:binary
+       - yarn cypress:test       
