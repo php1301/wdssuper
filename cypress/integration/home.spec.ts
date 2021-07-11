@@ -13,7 +13,7 @@ describe("Homepage", () => {
             .and("equal", "https://pankod.github.io/superplate/");
     });
 
-    it("Should have icons", () => {
-        cy.getBySel("icon").should("have.length", 12);
-    });
+    // it("Should have icons", () => {
+    //     cy.getBySel("icon").should("have.length", 12);
+    // });
 });
