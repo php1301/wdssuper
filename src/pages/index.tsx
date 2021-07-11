@@ -5,7 +5,7 @@ export const config = {
     hybrid: false,
 };
 import { Layout } from "@components/layout/layout";
-import { Container, Header, Main, Footer, Cards } from "@components";
+import { Container, Main, Cards, Subscription } from "@components";
 import { I18NExample } from "@components/examples/translate";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
@@ -14,11 +14,10 @@ const Home = () => {
     const isAmp = useAmp();
     return (
         <Container>
-            <Header />
+            <Subscription />
             <Main />
             <I18NExample />
             <Cards />
-            <Footer />
         </Container>
     );
 };

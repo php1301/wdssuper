@@ -1,14 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 /* Write your own custom base styles here */
+
 @layer base {
 	html {
 		-webkit-tap-highlight-color: transparent;
 	}
-	html,
-	body {
+	html, body {
 		@apply text-body font-body antialiased;
 	}
 	p {
@@ -17,10 +16,10 @@
 	p:last-of-type {
 		@apply mb-0;
 	}
-	p > a {
+	p>a {
 		@apply text-body transition;
 	}
-	p > a:hover {
+	p>a:hover {
 		@apply text-heading;
 	}
 }
@@ -47,26 +46,48 @@
 	.bar:last-child {
 		width: 75%;
 	}
-	.menuBtn:hover .bar:first-child,
-	.menuBtn:hover .bar:last-child {
+	.menuBtn:hover .bar:first-child, .menuBtn:hover .bar:last-child {
 		@apply w-full;
 	}
 	.menuBtn:hover .bar:nth-child(2) {
 		width: 60%;
 	}
-
 	/* Header Menu */
+	.site-logo svg {
+		width: 123px;
+		height: 45px;
+	}
+	
+	@media (min-width: 640px) {
+		.site-logo svg {
+			width: 131px;
+			height: 48px;
+		}
+	}
+
+	/* #siteHeader {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1440px;
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+		display: flex;
+		-webkit-box-align: center;
+		align-items: center;
+		-webkit-box-pack: justify;
+		justify-content: space-between;
+		height: 64px;
+	} */
 	#siteHeader.is-scrolling .innerSticky {
 		@apply shadow-header;
 	}
-	.headerMenu .menuItem > a::before {
+	.headerMenu .menuItem>a::before {
 		@apply absolute end-0 w-0 bg-heading -bottom-7;
 		content: "";
 		height: 3px;
 		transition: all 0.3s ease-in-out 0s;
 	}
-	.megaMenu,
-	.subMenu {
+	.megaMenu, .subMenu {
 		visibility: hidden;
 		transition: all 0.4s;
 		top: calc(100% + 25px);
@@ -84,7 +105,7 @@
 			width: 1200px;
 		}
 	}
-	.megaMenu ul > li:last-of-type {
+	.megaMenu ul>li:last-of-type {
 		@apply pb-0 border-0 mb-0;
 	}
 	.subMenu {
@@ -98,22 +119,19 @@
 	.subMenuChild {
 		transition: all 0.3s;
 	}
-	.subMenu li:hover > .subMenuChild {
+	.subMenu li:hover>.subMenuChild {
 		@apply opacity-100 visible -top-3;
 	}
-	.megaMenu .subMenuGrid > li:last-of-type {
+	.megaMenu .subMenuGrid>li:last-of-type {
 		@apply border-b-0 pb-0 mb-0;
 	}
-
-	.headerMenu .menuItem:hover > a::before {
+	.headerMenu .menuItem:hover>a::before {
 		@apply w-full end-auto start-0;
 	}
-	.headerMenu .menuItem:hover > .megaMenu,
-	.headerMenu .menuItem:hover > .subMenu {
+	.headerMenu .menuItem:hover>.megaMenu, .headerMenu .menuItem:hover>.subMenu {
 		visibility: visible;
 		@apply top-full;
 	}
-
 	/* Mobile Drawer Menu */
 	.mobileMenu .menu-item.active {
 		@apply text-black font-semibold;
@@ -126,35 +144,33 @@
 	.mobileMenu li li {
 		@apply text-body text-sm;
 	}
-	.mobileMenu li li div > a {
+	.mobileMenu li li div>a {
 		@apply relative py-2.5 text-body;
 	}
-	.mobileMenu li > ul > li > div > a:before {
+	.mobileMenu li>ul>li>div>a:before {
 		content: "";
 		height: 1px;
 		@apply flex absolute bg-body top-1/2 start-1.5 md:start-3 w-1.5 md:w-2;
 	}
-
 	/* Hero Banner */
 	@media (min-width: 1500px) {
-		.heroBannerOne > div {
+		.heroBannerOne>div {
 			margin-left: -500px;
 			margin-right: -500px;
 		}
 	}
 	@media (min-width: 1780px) {
-		.heroBannerOne > div {
+		.heroBannerOne>div {
 			margin-left: -750px;
 			margin-right: -750px;
 		}
 	}
 	@media (min-width: 1850px) {
-		.heroBannerOne > div {
+		.heroBannerOne>div {
 			margin-left: -850px;
 			margin-right: -850px;
 		}
 	}
-
 	/* Exclusive Year Section css */
 	.exclusiveYear {
 		opacity: 0.02;
@@ -175,14 +191,12 @@
 			font-size: 240px;
 		}
 	}
-
 	@media (min-width: 667px) {
 		.exclusiveImage {
 			min-width: 280px;
 			min-height: 300px;
 		}
 	}
-
 	/* Your own custom utilities */
 	.productColor.active {
 		@apply border-heading;
@@ -190,7 +204,7 @@
 	.productSize.active {
 		@apply border-heading bg-heading text-white;
 	}
-	.productTags a:last-of-type > span {
+	.productTags a:last-of-type>span {
 		display: none;
 	}
 	/* For login and signup switch */
@@ -208,22 +222,18 @@
 		-webkit-transition: 0.4s;
 		transition: 0.4s;
 	}
-
-	input:checked + .slider {
+	input:checked+.slider {
 		background-color: #212121;
 	}
-
-	input:checked + .slider:before {
+	input:checked+.slider:before {
 		-webkit-transform: translateX(16px);
 		-ms-transform: translateX(16px);
 		transform: translateX(16px);
 	}
-
 	/* Rounded sliders */
 	.slider.round {
 		border-radius: 20px;
 	}
-
 	.slider.round:before {
 		border-radius: 50%;
 	}
@@ -238,7 +248,6 @@
 	input::placeholder {
 		color: #707070;
 	}
-
 	.popupClosed {
 		@apply -top-3.5 md:-top-4 -end-3.5 md:-end-4;
 	}
@@ -248,7 +257,6 @@
 	.modal-root .os-content {
 		@apply flex items-center justify-center lg:block;
 	}
-
 	.cart-counter-badge {
 		min-width: 20px;
 		min-height: 20px;
@@ -256,19 +264,19 @@
 		border-radius: 20px;
 		font-size: 10px;
 	}
-
 	@media (max-wdith: 1279px) {
 		.cart-counter-badge {
 			min-width: 16px;
 			min-height: 16px;
 		}
 	}
-	.carouselWrapper .product-gallery + div {
+	.carouselWrapper .product-gallery+div {
 		@apply hidden;
 	}
 }
 
 /* Breadcrumb truncate last child */
+
 .chawkbazarBreadcrumb li:last-child {
 	@apply truncate;
 }

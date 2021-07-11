@@ -11,6 +11,7 @@ module.exports = {
                 black: "#000",
                 white: "#fff",
                 linen: "#FBF1E9",
+                secondary: "#d0af66",
                 linenSecondary: "#ECE7E3",
                 olive: "#3D9970",
                 maroon: "#B03060",
@@ -49,6 +50,9 @@ module.exports = {
                 "450px": "450px",
                 "500px": "500px",
                 "64vh": "64vh",
+            },
+            height: {
+                "68px": "68px",
             },
             minHeight: {
                 "50px": "50px",
