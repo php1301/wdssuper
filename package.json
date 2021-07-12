@@ -17,11 +17,10 @@
         "apollo:sync": "npm run apollo:download-schema && npm run apollo:generate-types",
         "lint": "eslint --rule \"@typescript-eslint/no-unused-vars: off\" \"**/*.{js,jsx,ts,tsx}\" --fix",
         "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
-        "test": "jest -c test/jest.config.js --ci --reporters=default --reporters=jest-junit",
-        "cypress:binary":"cypress install",
+        "test": "jest -c test/jest.config.js",
         "cypress:open": "cypress open",
         "cypress:run": "cypress run --config video=false",
-        "cypress:test": "start-server-and-test start http://localhost:3000 cypress:run"
+        "cypress:test": "start-server-and-test test-execute http://localhost:3000 cypress:run"
     },
     "dependencies": {
         "@apollo/client": "^3.3.20",
@@ -103,7 +102,6 @@
         "identity-obj-proxy": "^3.0.0",
         "isomorphic-unfetch": "^3.1.0",
         "jest": "^27.0.6",
-        "jest-junit": "^12.2.0",
         "lint-staged": "^11.0.0",
         "nock": "^13.1.0",
         "postcss": "^8.3.5",
