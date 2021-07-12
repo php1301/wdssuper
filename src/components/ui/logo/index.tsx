@@ -17,12 +17,12 @@ export const Logo: React.FC<React.AnchorHTMLAttributes<{}>> = ({
             )}
             {...props}
         >
-           <NextjsIcon
-            data-test="icon"
-            className="text-white mx-auto"
-            width="96"
-            height="58"
-        />
+            <NextjsIcon
+                data-test="icon"
+                className="text-white mx-auto"
+                width="96"
+                height="58"
+            />
         </Link>
     );
 };

@@ -1,11 +1,17 @@
 import React, { useRef } from "react";
-import { Logo } from "@components";
-import { siteSettings } from "@settings/site-settings";
-import { useUI } from "@contexts/ui.context";
+import dynamic from "next/dynamic";
 import { useTranslation } from "next-i18next";
-import { addActiveScroll } from "@utils/add-active-scroll";
+import { Logo } from "@components";
 import { SearchIcon } from "@components/icons";
+import { useUI } from "@contexts/ui.context";
+import { siteSettings } from "@settings/site-settings";
+import { addActiveScroll } from "@utils/add-active-scroll";
+import { ROUTES } from "@utils/routes";
 
+const AuthMenu = dynamic(() => import("./auth-menu"), { ssr: false });
+const CartButton = dynamic(() => import("@components/cart/cart-button"), {
+    ssr: false,
+});
 type DivElementRef = React.MutableRefObject<HTMLDivElement>;
 const { site_header } = siteSettings;
 
@@ -59,6 +65,21 @@ export const Header: React.FC = () => {
                             >
                                 <SearchIcon />
                             </button>
+                            <div className="-mt-0.5 flex-shrink-0">
+                                <AuthMenu
+                                    href={ROUTES.ACCOUNT}
+                                    isAuthorized={isAuthorized}
+                                    className="text-sm xl:text-base  text-white font-semibold"
+                                    btnProps={{
+                                        className:
+                                            "text-sm xl:text-base text-white font-semibold focus:outeline-none",
+                                        children: t("text-sign-in"),
+                                    }}
+                                >
+                                    {t("text-account")}
+                                </AuthMenu>
+                            </div>
+                            <CartButton />
                         </div>
                     </div>
                 </div>
