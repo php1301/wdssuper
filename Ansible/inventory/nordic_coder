@@ -1,0 +1,14 @@
+[nordic_coder]
+192.168.33.10
+
+[nordic_coder:vars]
+ansible_user=vagrant
+ansible_connection=ssh
+host_key_checking = False
+ansible_ssh_private_key_file=private_key
+
+#[all:vars]
+#ansible_connection=ssh
+#ansible_user=root
+#ansible_port=2222
+#ansible_ssh_pass=Vo2EVnm2Bm37RuNbT8sChX6

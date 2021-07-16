@@ -1,0 +1,44 @@
+- hosts: nordic_coder
+  become: yes
+  tasks:
+
+    - name: APT update
+      apt:
+        update_cache: yes
+
+    - name: Install require packages
+      apt:
+        pkg:
+        - apt-transport-https
+        - ca-certificates
+        - gnupg-agent
+        - curl
+        - software-properties-common
+
+    - name: Add an Apt signing key, uses whichever key is at the URL
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Fingerprint
+      shell: apt-key fingerprint 0EBFCD88
+
+    - name: Add specified repository into sources list
+      apt_repository:
+        repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+        state: present
+
+    - name: Install require packages
+      apt:
+        update_cache: yes
+        pkg:
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+
+    - name: Test docker-ce
+      shell: docker run hello-world
+      register: result
+
+    - debug:
+        var: result.stdout

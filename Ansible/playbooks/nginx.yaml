@@ -1,0 +1,31 @@
+- hosts: nordic_coder
+  become: yes
+  tasks:
+
+    - name: APT update
+      apt:
+        update_cache: yes
+
+    - name: Install require packages
+      apt:
+        pkg:
+        - apt-transport-https
+        - ca-certificates
+        - gnupg-agent
+        - curl
+        - software-properties-common
+        
+    - name: APT update
+      apt:
+        update_cache: yes
+
+    - name: Install server
+      apt:
+        update_cache: yes
+        pkg:
+        - nginx
+
+    - name: Start service nginx, if not started
+      service:
+        name: nginx
+        state: started
