@@ -34,6 +34,7 @@
             "@test": ["test"],
             "@contexts/*": ["src/contexts/*"],
             "@framework/*": ["src/framework/basic-rest/*"],
+            "@containers/*": ["src/containers/*"],
             "@settings/*": ["src/settings/*"],
             "@utils/*": ["src/utils/*"]
         }
